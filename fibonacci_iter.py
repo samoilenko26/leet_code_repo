@@ -15,3 +15,17 @@ fibonacci_iter = FibonacciIter()
 for item in fibonacci_iter:
     print(item)
     time.sleep(1)
+
+
+################################
+
+def fibonacci_iter_func():
+    first = 0
+    second = 1
+    while True:
+        first, second = second, first + second
+        yield second
+
+for item in fibonacci_iter_func():
+    print(item)
+    time.sleep(1)
