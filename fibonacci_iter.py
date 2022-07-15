@@ -29,3 +29,17 @@ def fibonacci_iter_func():
 for item in fibonacci_iter_func():
     print(item)
     time.sleep(1)
+
+
+###############################
+
+class MyIter2:
+    def __iter__(self):
+        for item in range(5):
+            yield item
+        raise StopIteration
+
+a = MyIter2()
+
+for i in a:
+    print(i)
